@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Breakout - Simple implementation</title>
+	<script type="text/javascript" src="jQuery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="Observable.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+	<script>
+		$(function(){
+			setupCanvas($('canvas'));
+			setupControls();
+			resetBall();
+		    draw();
+			startLoop();
+		});
+	</script>
+</head>
+<body>
+    <canvas></canvas>
+</body>
+</html>
