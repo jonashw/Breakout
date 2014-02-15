@@ -1,6 +1,15 @@
-var canvas, ctx, bricks, loopInterval;
 var targetFPS = 60;
 var refreshDelay = 1000 / targetFPS;
+var canvas, ctx, bricks, loopInterval;
+
+function Breakout($canvas){
+	canvas = $canvas;
+	setupCanvas();
+	setupControls();
+	resetBall();
+	draw();
+	startLoop();
+}
 var arena = {
 	height: 800
 	,width: 600
@@ -80,8 +89,7 @@ var brickCollection = {
 	}
 };
 
-function setupCanvas($el){
-	canvas = $el;
+function setupCanvas(){
 	canvas
 	   .css({
 			height: arena.height + 'px'
